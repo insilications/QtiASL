@@ -1,0 +1,2 @@
+install -dm 0755 %{buildroot}/usr/share/applications/
+install -m 755 -p default.desktop %{buildroot}/usr/share/applications/qtiasl.desktop

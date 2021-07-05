@@ -1,5 +1,5 @@
 PKG_NAME := QtiASL
-URL = https://github.com/sqlitebrowser/sqlitebrowser.git
+URL = https://github.com/ic005k/QtiASL.git
 ARCHIVES = 
 ARCHIVES_GIT = 
 
