@@ -1,2 +1,4 @@
 install -dm 0755 %{buildroot}/usr/share/applications/
+sed -i 's/^Icon=.*/Icon=QtiASL/' default.desktop
+sed -i 's/^Exec=.*/Exec=QtiASL/' default.desktop
 install -m 755 -p default.desktop %{buildroot}/usr/share/applications/qtiasl.desktop
