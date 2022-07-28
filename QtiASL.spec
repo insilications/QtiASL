@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : QtiASL
 Version  : 1.1.65
-Release  : 12
+Release  : 13
 URL      : file:///aot/build/clearlinux/packages/QtiASL/QtiASL-v1.1.65.tar.gz
 Source0  : file:///aot/build/clearlinux/packages/QtiASL/QtiASL-v1.1.65.tar.gz
 Summary  : No detailed summary available
@@ -14,7 +14,6 @@ License  : GPL-2.0
 BuildRequires : PyQt5
 BuildRequires : binutils-dev
 BuildRequires : buildreq-cmake
-BuildRequires : buildreq-qmake
 BuildRequires : bzip2-dev
 BuildRequires : bzip2-staticdev
 BuildRequires : dbus-python
@@ -86,6 +85,7 @@ BuildRequires : zlib-staticdev
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
+Patch1: 0001-Fix-libqscintilla2_qt5.so-path.patch
 
 %description
 No detailed description available
@@ -93,6 +93,7 @@ No detailed description available
 %prep
 %setup -q -n QtiASL
 cd %{_builddir}/QtiASL
+%patch1 -p1
 
 %build
 unset http_proxy
@@ -169,7 +170,7 @@ ccache -s || :
 ## ccache stats
 
 %install
-export SOURCE_DATE_EPOCH=1659017562
+export SOURCE_DATE_EPOCH=1659017905
 rm -rf %{buildroot}
 ## altflags1 content
 ## altflags1

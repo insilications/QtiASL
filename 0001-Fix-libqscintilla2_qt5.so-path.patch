@@ -1,0 +1,25 @@
+From 2c73257360cb984b4262c755a4999f6ccefb45d3 Mon Sep 17 00:00:00 2001
+From: Francisco Boni Neto <boboniboni@gmail.com>
+Date: Thu, 28 Jul 2022 11:16:23 -0300
+Subject: [PATCH] Fix libqscintilla2_qt5.so path
+
+---
+ Xiasl.pro | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Xiasl.pro b/Xiasl.pro
+index d2cd086..cc2e8ea 100644
+--- a/Xiasl.pro
++++ b/Xiasl.pro
+@@ -24,7 +24,7 @@ LIBS += \
+ 
+ unix:!macx:{
+ 
+-    LIBS += -L$PWD libqscintilla2_qt5.so
++    LIBS += /usr/lib64/libqscintilla2_qt5.so
+ 
+     QMAKE_RPATHDIR=$ORIGIN
+     QMAKE_LFLAGS += -no-pie
+-- 
+2.37.1
+
