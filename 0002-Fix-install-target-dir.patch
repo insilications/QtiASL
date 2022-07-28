@@ -1,0 +1,25 @@
+From e3c7558c530798d89865b190b42de17f3b333a36 Mon Sep 17 00:00:00 2001
+From: Francisco Boni Neto <boboniboni@gmail.com>
+Date: Thu, 28 Jul 2022 11:36:51 -0300
+Subject: [PATCH 2/2] Fix install target dir
+
+---
+ Xiasl.pro | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Xiasl.pro b/Xiasl.pro
+index cc2e8ea..1cd6406 100644
+--- a/Xiasl.pro
++++ b/Xiasl.pro
+@@ -155,7 +155,7 @@ FORMS += \
+ 
+ # Default rules for deployment.
+ qnx: target.path = /tmp/$${TARGET}/bin
+-else: unix:!android: target.path = /opt/$${TARGET}/bin
++else: unix:!android: target.path = /usr/bin
+ !isEmpty(target.path): INSTALLS += target
+ 
+ DISTFILES += \
+-- 
+2.37.1
+

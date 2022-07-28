@@ -1,7 +1,7 @@
 From 2c73257360cb984b4262c755a4999f6ccefb45d3 Mon Sep 17 00:00:00 2001
 From: Francisco Boni Neto <boboniboni@gmail.com>
 Date: Thu, 28 Jul 2022 11:16:23 -0300
-Subject: [PATCH] Fix libqscintilla2_qt5.so path
+Subject: [PATCH 1/2] Fix libqscintilla2_qt5.so path
 
 ---
  Xiasl.pro | 2 +-
