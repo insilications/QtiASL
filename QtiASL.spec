@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : QtiASL
 Version  : 1.1.65
-Release  : 16
+Release  : 17
 URL      : file:///aot/build/clearlinux/packages/QtiASL/QtiASL-v1.1.65.tar.gz
 Source0  : file:///aot/build/clearlinux/packages/QtiASL/QtiASL-v1.1.65.tar.gz
 Summary  : No detailed summary available
@@ -191,7 +191,7 @@ ccache -s || :
 ## ccache stats
 
 %install
-export SOURCE_DATE_EPOCH=1659019091
+export SOURCE_DATE_EPOCH=1659019191
 rm -rf %{buildroot}
 ## altflags1f content
 ## altflags1
@@ -257,8 +257,8 @@ export DESKTOP_SESSION=plasma
 %make_install
 ## install_append content
 install -dm 0755 %{buildroot}/usr/share/applications/
-sed -i 's/^Icon=.*/Icon=QtiASL/' default.desktop
-sed -i 's/^Exec=.*/Exec=QtiASL/' default.desktop
+sed -i 's/^Icon=.*/Icon=Xiasl/' default.desktop
+sed -i 's/^Exec=.*/Exec=Xiasl/' default.desktop
 install -m 755 -p default.desktop %{buildroot}/usr/share/applications/qtiasl.desktop
 ## install_append end
 ## start %find_lang macros
